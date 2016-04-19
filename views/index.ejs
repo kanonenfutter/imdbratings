@@ -5,24 +5,35 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/skeleton.css' />
       <script type="text/javascript" src="/javascripts/application.js"></script>
       <script type="text/javascript" src="/javascripts/app2.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <form>
-    Filmtitel eingeben:
-    <input type="text" name="t"><br>
-    <textarea cols=50 id="filmtitles_ta"></textarea><br>
-    <button id="search-button" type="button" onclick="search()">Search</button><br>  
-    Results
-    <p id="output"></p>
-    <p id="no_titles"></p>Titles
-    </form>
-    Testdaten<br>
-      Anohana<br>
-      Oldboy<br>
-      Source Code
+      <div class="container">
+          <div class="row">
+              <h1><%= title %></h1>
+              <p>Welcome to <%= title %></p>
+                <form>
+                    <div class="row">
+                        <div class="twelve columns">
+                            <label for="filmtitles_ta">Enter film titles:</label>
+                            <textarea id="filmtitles_ta" class="u-full-width"></textarea>
+                        </div>
+                    </div>
+<!--                <input type="text" name="t"><br>-->
+<!--                <textarea id="filmtitles_ta"></textarea><br>-->
+                <button id="search-button" class="button-primary" type="button" onclick="search()">Go!</button>
+                <label for="output">Results</label>
+                <p id="output"></p>
+                <p id="no_titles"></p>Titles
+                </form>
+                  Testdaten<br>
+                  Anohana<br>
+                  Oldboy<br>
+                  Source Code
+          </div>
+      </div>
   </body>
 </html>
