@@ -37,6 +37,7 @@ function processRequest(e) {
         // time to partay!!!
         var response = JSON.parse(xhr.responseText);
         console.log(response.imdbRating);
+        document.getElementById("output").innerHTML = response.imdbRating;
     }
 }
 //document.getElementById("search-button").onclick = function() {search()};
